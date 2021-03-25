@@ -20,7 +20,7 @@ You can install PHP for instance via [Homebrew](https://brew.sh/index_de). You j
 On Linux you could use for instance `sudo apt-get install apache2 php`.
 
 You also need to install [MySQL](https://www.mysql.com/de/). 
-For windows please follow this [link](https://dev.mysql.com/doc/refman/8.0/en/mysql-installer.html.)
+For windows please follow this [link](https://dev.mysql.com/doc/refman/8.0/en/mysql-installer.html.).
 On Mac OSX we recommend the installation via Homebrew with `brew install mysql`.
 On Linux you could use `sudo apt-get install mysql`.
 
@@ -33,11 +33,13 @@ a title, the company it belongs to, location, short introduction text and the da
    the list of jobs insert a text input field and a search button next to it. In this first step,
    you can simply add few sample jobs to verify that your layout looks correctly. 
    Take a look at this [UI mockup](https://drive.google.com/file/d/18V_x8XmCNcMBAOrexFf6kpxn8WPWxumR/view?usp=sharing)
-   which should give you a basic idea of how the layout should like approximately. You don't have to invest much time to make the user interface pretty.
+   which should give you a basic idea of how the layout should look like approximately. You don't have to invest much time to make the user interface pretty.
 2. Create a mysql database for the project and set it up so that you can store jobs and companies. 
    A job contains following data: ID, Title, Location, Date where it was published.
    A company contains only: ID, Name 
-   From the relational requirements
+   
+   The IDs should be an auto-incremented integer key. 
+   From the perspective of the relational requirements,
    a company can have one or multiple jobs assigned while a particular job belongs to one company. Please
    consider this relationship when creating the database tables.
    Please commit the SQL statements you execute in order to set up your database as well in this git repository.
@@ -63,10 +65,3 @@ The preferred option is to send us a link to the forked repository in your Githu
 If you have any questions do not hesitate to contact me via [E-Mail](mailto:juergen.ratzenboeck@jobs.at). 
 
 Happy coding :)
-   
-
-   
-   
-   
-
- 

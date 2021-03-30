@@ -9,6 +9,12 @@ Was fun coding it.
 
 Please create a database with name "jobsatdb".
 
+Run composer to install dependencies.
+```
+composer install
+```
+
+
 Please configure your MySQL database connection and modify the .env correspondingly 
 ```
 DB_DNS = mysql:host=localhost;port=3306;dbname=jobsatdb

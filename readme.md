@@ -7,11 +7,13 @@ Was fun coding it.
 
 ### Instalation.
 
+Please create a database with name "jobsatdb".
+
 Please configure your MySQL database connection and modify the .env correspondingly 
 ```
 DB_DNS = mysql:host=localhost;port=3306;dbname=jobsatdb
-DB_USER = user
-DB_PASSWORD =
+DB_USER = your_user_name
+DB_PASSWORD = your_password
 ```
 
 Run migrations:

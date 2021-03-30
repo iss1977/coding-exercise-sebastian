@@ -5,6 +5,7 @@ class m001_initial
     public function up()
     {
         $SQL = "
+            
             CREATE TABLE companies (
               id  INT NOT NULL AUTO_INCREMENT,
               name VARCHAR(255) NULL,
@@ -22,7 +23,7 @@ class m001_initial
                 FOREIGN KEY (company_id)
                 REFERENCES companies (id)
                 ON DELETE SET NULL
-                ON UPDATE NO ACTION);
+                );
                     ";
         $db= \app\core\Application::$app->db;
         $db->pdo->exec($SQL);

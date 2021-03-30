@@ -59,14 +59,7 @@ class Router
 
         }
 
-        // geeksforgeeks: Another way to use object
-        // $obj = new GFG();
-        // call_user_func(array($obj, 'show'));
-        // and this is the way we use this.
-        // it will call SiteController with the name of the function both from $callback array and pass as parameter $this->request.
         return call_user_func($callback, $this->request); //  works also without return....
-
-
     }
 
     /**
@@ -82,31 +75,4 @@ class Router
         return ob_get_clean();
 //        return $webPageContent;
     }
-
-//    protected function layoutContent(){
-//        $layout = Application::$app->getController()->layout;
-//
-//        // webpage output buffer
-//        ob_start();
-//        include_once Application::$ROOT_DIR . "/views/layouts/$layout.php";
-//        return ob_get_clean();// display and clear.
-//    }
-//
-//    protected function renderOnlyView($view, $params)
-//    {
-//        foreach ($params as $key => $value) {
-//            $$key = $value; // if $key evaluates to "name" then we will have a variable $name with the value $value
-//        }
-//
-//        ob_start();
-//        // the variables initiated in the foreach loop will be available
-//        include_once Application::$ROOT_DIR . "/views/$view.php";
-//        return ob_get_clean();
-//    }
-//
-//    protected function renderContent($viewContent)
-//    {
-//        $layoutContent = $this->layoutContent();
-//        return str_replace('{{content}}', $viewContent , $layoutContent);
-//    }
 }

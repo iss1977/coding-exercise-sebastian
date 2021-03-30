@@ -32,6 +32,4 @@ class JobsGateway
             exit($e->getMessage());
         }
     }
-
-
 }

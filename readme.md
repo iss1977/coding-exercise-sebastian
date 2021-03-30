@@ -17,10 +17,13 @@ DB_PASSWORD =
 Run migrations:
 
 ```php
-php migrations.php
+php migrations.php up
 ```
 
-Add your custom data to the database.
+Add some sample data to the database:
+```php
+php migrations.php generate
+```
 
 Run the Server:
 ```php

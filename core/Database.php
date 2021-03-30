@@ -50,6 +50,8 @@ class Database
         } else {
             $this->log("All migrations already applied");
         }
+
+
     }
 
     public function createMigrationsTable()
@@ -94,5 +96,29 @@ class Database
         return Application::$app->db->pdo->prepare($stm); // returns a statement.
     }
 
+
+    public function createMockData()
+    {
+        $this->log("Creating some companies...");
+
+        $statement =  $this->pdo->prepare("
+        INSERT INTO companies (id, name) VALUES (1, 'E-punkt');
+        INSERT INTO companies (id, name) VALUES (2, 'Karriere.at');
+        INSERT INTO companies (id, name) VALUES (3, 'Jobs.at');
+        INSERT INTO companies (id, name) VALUES (4, 'Müller GmbH'); ");
+        $statement->execute();
+
+        $this->log("Creating some jobs...");
+        $statement =  $this->pdo->prepare("
+        INSERT INTO jobs (id,title, location, date, company_id)  VALUES (1,'Web Developer', 'Linz', '2021-03-20', '1');
+        INSERT INTO jobs (id,title, location, date, company_id)  VALUES (2,'Java Coder', 'Wien', '2021-03-21', '2');
+        INSERT INTO jobs (id,title, location, date, company_id)  VALUES (3,'Javascript Genie', 'Leonding', '2021-03-22', '3');
+        INSERT INTO jobs (id,title, location, date, company_id)  VALUES (4,'PHP Enwickler', 'Wien', '2021-03-25', '4');
+        INSERT INTO jobs (id,title, location, date, company_id)  VALUES (5,'Game Changer', 'Linz', '2021-03-26', '5');
+        INSERT INTO jobs (id,title, location, date, company_id)  VALUES (6,'Tester', 'Linz', '2021-03-28', '4');
+        INSERT INTO jobs (id,title, location, date, company_id)  VALUES (7,'Java Developer', 'Wien', '2021-03-29', '5');    ");
+        $statement->execute();
+        $this->log("done.");
+    }
 
 }

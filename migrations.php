@@ -27,6 +27,16 @@ $config = [
     ]
 ];
 
-$app = new Application(__DIR__, $config);
-$app->db->applyMigrations();
 
+$app = new Application(__DIR__, $config);
+if ($argc>1) {
+    if ($argv[1] === 'up'){ // $argv[0] will be this file,$argv[1] will be up, down, generate
+        $app->db->applyMigrations();
+    }
+
+
+    if ($argv[1]  === 'generate') { // $argv[0] will be this file,$argv[1] will be up, down, generate
+        $app->db->createMockData();
+    }
+
+}

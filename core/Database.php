@@ -111,16 +111,16 @@ class Database
 
         $this->log("Creating some jobs...");
         $statement =  $this->pdo->prepare("
-        INSERT INTO jobs (id,title, location, date, company_id)  VALUES (1,'Web Developer', 'Linz', '2021-03-20', '1');
-        INSERT INTO jobs (id,title, location, date, company_id)  VALUES (2,'Java Coder', 'Wien', '2021-03-21', '2');
-        INSERT INTO jobs (id,title, location, date, company_id)  VALUES (3,'Javascript Genie', 'Leonding', '2021-03-22', '3');
-        INSERT INTO jobs (id,title, location, date, company_id)  VALUES (4,'PHP Enwickler', 'Wien', '2021-03-25', '4');");
+        INSERT INTO jobs (id,title, description, location, date, company_id)  VALUES (1,'Web Developer', 'Unsere 200 MitarbeiterInnen in Wien, Graz und Linz führen Kunden unterschiedlichster Branchen mit Know-How und einer gesunden Portion Verständnis für das Menschliche in ihre sinnvolle, digitale Welt. Leidenschaft für Digitalisierung, florierende Expertise und autonomes, sinnstiftendes Handeln sind in unserer DNA – denn wir haben Digital im Blut!', 'Linz', '2021-03-20', '1');
+        INSERT INTO jobs (id,title, description,location, date, company_id)  VALUES (2,'Java Coder', 'Die HAPEKO HR Executive Consultants sind die ersten Ansprechpartner für Fach- und Führungskräfte in Österreich. Schwerpunkt der Tätigkeit ist das Schaffen von Verbindungen zwischen Spezialisten und Führungskräften mit einem beruflichen Veränderungswunsch und passenden Unternehmen. HAPEKO hat mehr als 15 Niederlassungen in Österreich und Deutschland.','Wien', '2021-03-21', '2');
+        INSERT INTO jobs (id,title, description,location, date, company_id)  VALUES (3,'Javascript Genie','Du kannst dann mit uns gemeinsam in einem persönlichen Gespräch besprechen, in welchem Unternehmen der E-CONOMIX Group du eingebunden werden möchtest (E-CONOMIX, Cyberhouse, Lemontec, KlickImpuls, DataReporter).', 'Leonding', '2021-03-22', '3');
+        INSERT INTO jobs (id,title, description,location, date, company_id)  VALUES (4,'PHP Enwickler','Wir bei Anexia übernehmen jeden Tag Verantwortung für alle Herausforderungen der digitalen Welt. Denn wir verstehen uns als die „Digital Transformation Engine“. Wie uns das gelingt? Ganz einfach. Wir sind eine Familie von Möglichmacher/innen und Neu-Denker/innen. Wir können, wir wollen und wir dürfen auch. Und das macht uns einzigartig! Willst du ein Teil unserer digitalen Revolution werden und mit uns gemeinsam Geschichte schreiben? #joinourrevolution', 'Wien', '2021-03-25', '4');");
         $statement->execute();
 
         $statement =  $this->pdo->prepare("
-        INSERT INTO jobs (id,title, location, date, company_id)  VALUES (5,'Game Changer', 'Linz', '2021-03-26', '5');
-        INSERT INTO jobs (id,title, location, date, company_id)  VALUES (6,'Tester', 'Linz', '2021-03-28', '4');
-        INSERT INTO jobs (id,title, location, date, company_id)  VALUES (7,'Java Developer', 'Wien', '2021-03-29', '5');    ");
+        INSERT INTO jobs (id,title, description,location, date, company_id)  VALUES (5,'Game Changer','Wir übernehmen gerne Verantwortung, respektieren einander und wir wissen, dass wir alles schaffen können. Wir schauen gut auf Anexia und Anexia schaut auch gut auf uns. Begeisterung, Erfahrung und Kompetenz zählen, daher kannst du ein faires Gehalt und zahlreiche Benefits erwarten.', 'Linz', '2021-03-26', '5');
+        INSERT INTO jobs (id,title, description,location, date, company_id)  VALUES (6,'Tester','Du magst es bunt und agil, findest Software-Entwicklung als eine der schönsten Aufgaben der Welt und liebst es an herausfordernden Entwicklerfragen zu tüfteln? Dann bist du bei uns im Team genau richtig, denn wir wollen unsere Kunden/innen glücklich machen und uns permanent weiterentwickeln.', 'Linz', '2021-03-28', '4');
+        INSERT INTO jobs (id,title, description,location, date, company_id)  VALUES (7,'Java Developer','Mit unserer Cloud Management Plattform „Anexia Engine“ bieten wir unseren Kunden_innen diverse Cloud-Services in Selbstverwaltung an. Beginnend bei Basis-Services wie Domains und DNS, über Virtuelle Server bis hin zu Lösungen im Big Data-Umfeld', 'Wien', '2021-03-29', '5');    ");
         $statement->execute();
         $this->log("done.");
     }

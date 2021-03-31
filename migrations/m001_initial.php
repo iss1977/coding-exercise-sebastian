@@ -14,6 +14,7 @@ class m001_initial
             CREATE TABLE jobs (
               id INT NOT NULL AUTO_INCREMENT,
               title VARCHAR(255) NULL,
+              description TEXT NULL,
               location VARCHAR(255) NULL,
               date DATE NULL,
               company_id INT NULL,

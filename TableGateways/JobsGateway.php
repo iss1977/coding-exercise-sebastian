@@ -16,7 +16,7 @@ class JobsGateway
     public function findAll(): array
     {
         $statement = "
-            SELECT jobs.id, title,location,date, companies.name as company_name,
+            SELECT jobs.id, title, description, location,date, companies.name as company_name,
             CONCAT(title,location, companies.name) AS SearchString
             FROM jobs
             INNER JOIN companies ON jobs.company_id = companies.id
